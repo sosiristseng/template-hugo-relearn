@@ -1,8 +1,12 @@
 baseURL = 'https://sosiristseng.github.io/template-hugo-relearn/'
+canonifyURLs = true
+relativeURLs = true
+uglyURLs = false     # true -> basic/index.html -> basic.html
+
 languageCode = 'en-us'
 title = 'Hugo Relearn Theme Template'
 
-theme = "relearn"
+theme = 'relearn'
 
 # whether to use robots.txt
 enableRobotsTXT = true
@@ -11,6 +15,61 @@ enableGitInfo = true
 # whether to use emoji code
 enableEmoji = true
 
+[params]
+  mathJaxInitialize = "{ \"chtml\": { \"displayAlign\": \"left\" } }"
+  description = "Template for Hugo Relearn Theme"
+  author = "Wen-Wei Tseng"
+  themeVariant = [ "relearn-light", "relearn-dark", "learn", "neon", "blue", "green", "red" ]
+
+[markup]
+  [markup.highlight]
+    # if `guessSyntax = true`, there will be no unstyled code even if no language
+    # was given BUT Mermaid and Math codefences will not work anymore! So this is a
+    # mandatory setting for your site if you want to use Math codefences
+    guessSyntax = false
+    # here in this showcase we use our own modified chroma syntax highlightning style
+    # which is imported in theme-relearn-light.css / theme-relearn-dark.css;
+    # if you want to use a predefined style instead:
+    # - remove the following `noClasses`
+    # - set the following `style` to a predefined style name
+    # - remove the `@import` of the self-defined chroma stylesheet from your CSS files
+    #   (here eg.: theme-relearn-light.css / theme-relearn-dark.css)
+    noClasses = false
+
 # For search functionality
 [outputs]
 home = [ "HTML", "RSS", "SEARCH"]
+section = ["HTML", "RSS", "PRINT"]
+page = ["HTML", "RSS", "PRINT"]
+
+# showcase of the menu shortcuts; you can use relative URLs linking
+# to your content or use fully-quallified URLs to link outside of
+# your project
+[Languages]
+  [Languages.en]
+    title = "Hugo Relearn Template"
+    weight = 1
+    languageName = "English"
+    landingPageName = "<i class='fas fa-home'></i> Home"
+
+  [[Languages.en.menu.shortcuts]]
+    name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+    identifier = "ds"
+    url = "https://github.com/sosiristseng/template-hugo-relearn"
+    weight = 10
+
+  [[Languages.en.menu.shortcuts]]
+    name = "<i class='fas fa-fw fa-camera'></i> Showcases"
+    url = "more/showcase/"
+    weight = 11
+
+  [[Languages.en.menu.shortcuts]]
+    name = "<i class='fas fa-fw fa-bookmark'></i> Hugo Documentation"
+    identifier = "hugodoc"
+    url = "https://gohugo.io/"
+    weight = 20
+
+  [[Languages.en.menu.shortcuts]]
+    name = "<i class='fas fa-fw fa-tags'></i> Tags"
+    url = "tags/"
+    weight = 40
