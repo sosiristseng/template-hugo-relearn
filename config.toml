@@ -1,0 +1,16 @@
+baseURL = 'https://sosiristseng.github.io/template-hugo-relearn/'
+languageCode = 'en-us'
+title = 'Hugo Relearn Theme Template'
+
+theme = "relearn"
+
+# whether to use robots.txt
+enableRobotsTXT = true
+# whether to use git commit log
+enableGitInfo = true
+# whether to use emoji code
+enableEmoji = true
+
+# For search functionality
+[outputs]
+home = [ "HTML", "RSS", "SEARCH"]
