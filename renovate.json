@@ -2,9 +2,6 @@
     "extends": [
         "config:base"
     ],
-    "schedule": [
-      "weekly"
-    ],
     "git-submodules": {
         "enabled": true
     },
