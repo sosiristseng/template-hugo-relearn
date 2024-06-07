@@ -34,6 +34,13 @@ enableEmoji = true
     # - remove the `@import` of the self-defined chroma stylesheet from your CSS files
     #   (here eg.: theme-relearn-light.css / theme-relearn-dark.css)
     noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
 
 # For search functionality
 [outputs]
@@ -50,7 +57,7 @@ page = ["HTML", "RSS", "PRINT"]
     weight = 1
     languageName = "English"
 
-  [[Languages.en.params]]
+  [Languages.en.params]
     landingPageName = "<i class='fas fa-home'></i> Home"
 
   [[Languages.en.menu.shortcuts]]
