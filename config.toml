@@ -49,6 +49,8 @@ page = ["HTML", "RSS", "PRINT"]
     title = "Hugo Relearn Template"
     weight = 1
     languageName = "English"
+
+  [[Languages.en.params]]
     landingPageName = "<i class='fas fa-home'></i> Home"
 
   [[Languages.en.menu.shortcuts]]
