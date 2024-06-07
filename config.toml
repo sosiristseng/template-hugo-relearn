@@ -17,7 +17,6 @@ enableEmoji = true
 
 [params]
   mathJaxInitialize = "{ \"chtml\": { \"displayAlign\": \"left\" } }"
-  description = "Template for Hugo Relearn Theme"
   author.name = "Wen-Wei Tseng"
   themeVariant = [ "relearn-light", "relearn-dark", "learn", "neon", "blue", "green", "red" ]
 
