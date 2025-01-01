@@ -42,6 +42,7 @@ jobs:
         id: lychee
         with:
           fail: false
+          failIfEmpty: false
           args: '--accept 200,204,429 --verbose --no-progress --cache --max-cache-age 1d content/'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
