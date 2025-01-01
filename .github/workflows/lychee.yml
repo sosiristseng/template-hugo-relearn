@@ -10,13 +10,7 @@ on:
     paths:
       - 'docs/**'
       - '.lycheeignore'
-      - '.github/workflows/linkcheck.yml'
-  pull_request:
-    branches:
-      - main
-    paths:
-      - 'docs/**'
-      - '.lycheeignore'
+      - '.github/workflows/lychee.yml'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
